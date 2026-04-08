@@ -1,20 +1,18 @@
 package com.example.socialsparks
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsComp
+import java.util.Locale.getDefault
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
 
         val timeInput = findViewById<EditText>(R.id.timeInput)
         val suggestionText = findViewById<TextView>(R.id.suggestionText)
@@ -22,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val resetButton = findViewById<Button>(R.id.resetButton)
 
         submitButton.setOnClickListener {
-            val input = timeInput.text.toString().toLowerCase()
+            val input = timeInput.text.toString().lowercase(getDefault())
 
             if (input.contains("morning")) {
                 suggestionText.text = "Good morning! Have a great day!"
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 suggestionText.text = "Check on a colleague or a friend and have a quick chat."
             } else if (input.contains("evening")) {
                 suggestionText.text = "Call a family member to invite them over for dinner."
-            } else"
+            } else if (input.contains("night")) {
                 suggestionText.text = "Sorry, That doesn't have a spark. Try comforting words, You can do it!"
 
             resetButton.setOnClickListener {
