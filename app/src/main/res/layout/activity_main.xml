@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <EditText
         android:id="@+id/timeInput"
@@ -22,15 +23,17 @@
         android:layout_height="wrap_content"
         android:hint="Enter time of day (morning, afternoon, evening, or night)"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp" />
+        tools:layout_editor_absoluteY="56dp"
+        tools:ignore="Autofill,HardcodedText,MissingConstraints,TextFields" />
 
     <Button
         android:id="@+id/suggestionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Suggestion"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="493dp" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="498dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/resultText"
@@ -39,7 +42,8 @@
         android:text="Your Spark will appear here!"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="415dp" />
+        tools:layout_editor_absoluteY="415dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
         android:id="@+id/submitButton"
@@ -47,7 +51,8 @@
         android:layout_height="wrap_content"
         android:text="Spark Away"
         tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="647dp" />
+        tools:layout_editor_absoluteY="647dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
         android:id="@+id/resetButton"
@@ -55,7 +60,8 @@
         android:layout_height="wrap_content"
         android:text="Reset"
         tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="647dp" />
+        tools:layout_editor_absoluteY="647dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -63,6 +69,7 @@
         android:layout_height="257dp"
         app:srcCompat="@drawable/img"
         tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="134dp" />
+        tools:layout_editor_absoluteY="134dp"
+        tools:ignore="ContentDescription,MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

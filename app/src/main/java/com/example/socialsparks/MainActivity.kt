@@ -1,5 +1,6 @@
 package com.example.socialsparks
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale.getDefault
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
